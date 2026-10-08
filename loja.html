@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Lojinha de Papelaria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="titulo">Lojinha de Papelaria</h1>
+
+    <div class="busca-container">
+        <input type="text" id="campoBusca" onkeyup="filtrarProdutos()" placeholder="Pesquisar produto...">
+    </div>
+
+    <div class="container" id="listaProdutos">
+        <div class="card">
+            <img src="assets/caderno.jpg" alt="Caderno" class="img-produto">
+            <h3>Caderno</h3>
+            <p>Preço: R$ 15,00</p>
+            <p>Estoque: <span id="estoque1">10</span></p>
+            <div class="acoes-card">
+                <button class="btn-vender" onclick="venderItem(1)">Vender</button>
+                <button class="btn-repor" onclick="reporItem(1)">Repor</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/lapis.jpg" alt="Lápis" class="img-produto">
+            <h3>Lápis</h3>
+            <p>Preço: R$ 3,70</p>
+            <p>Estoque: <span id="estoque2">10</span></p>
+            <div class="acoes-card">
+                <button class="btn-vender" onclick="venderItem(2)">Vender</button>
+                <button class="btn-repor" onclick="reporItem(2)">Repor</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/canetas.jpg" alt="Canetas" class="img-produto">
+            <h3>Canetas</h3>
+            <p>Preço: R$ 12,00</p>
+            <p>Estoque: <span id="estoque3">10</span></p>
+            <div class="acoes-card">
+                <button class="btn-vender" onclick="venderItem(3)">Vender</button>
+                <button class="btn-repor" onclick="reporItem(3)">Repor</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/mochila.jpg" alt="Mochila" class="img-produto">
+            <h3>Mochila</h3>
+            <p>Preço: R$ 85,00</p>
+            <p>Estoque: <span id="estoque4">10</span></p>
+            <div class="acoes-card">
+                <button class="btn-vender" onclick="venderItem(4)">Vender</button>
+                <button class="btn-repor" onclick="reporItem(4)">Repor</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/organizador.jpg" alt="Organizador" class="img-produto">
+            <h3>Organizador</h3>
+            <p>Preço: R$ 42,00</p>
+            <p>Estoque: <span id="estoque5">10</span></p>
+            <div class="acoes-card">
+                <button class="btn-vender" onclick="venderItem(5)">Vender</button>
+                <button class="btn-repor" onclick="reporItem(5)">Repor</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/postit.jpg" alt="Bloco Post-it" class="img-produto">
+            <h3>Bloco Post-it</h3>
+            <p>Preço: R$ 8,50</p>
+            <p>Estoque: <span id="estoque6">10</span></p>
+            <div class="acoes-card">
+                <button class="btn-vender" onclick="venderItem(6)">Vender</button>
+                <button class="btn-repor" onclick="reporItem(6)">Repor</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/estojo.jpg" alt="Estojo" class="img-produto">
+            <h3>Estojo</h3>
+            <p>Preço: R$ 25,00</p>
+            <p>Estoque: <span id="estoque7">10</span></p>
+            <div class="acoes-card">
+                <button class="btn-vender" onclick="venderItem(7)">Vender</button>
+                <button class="btn-repor" onclick="reporItem(7)">Repor</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/marcatexto.jpg" alt="Marcador de Texto" class="img-produto">
+            <h3>Marcador de Texto</h3>
+            <p>Preço: R$ 18,00</p>
+            <p>Estoque: <span id="estoque8">10</span></p>
+            <div class="acoes-card">
+                <button class="btn-vender" onclick="venderItem(8)">Vender</button>
+                <button class="btn-repor" onclick="reporItem(8)">Repor</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/tesoura.jpg" alt="Tesoura" class="img-produto">
+            <h3>Tesoura</h3>
+            <p>Preço: R$ 9,90</p>
+            <p>Estoque: <span id="estoque9">10</span></p>
+            <div class="acoes-card">
+                <button class="btn-vender" onclick="venderItem(9)">Vender</button>
+                <button class="btn-repor" onclick="reporItem(9)">Repor</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/calculadora.jpg" alt="Calculadora" class="img-produto">
+            <h3>Calculadora</h3>
+            <p>Preço: R$ 35,00</p>
+            <p>Estoque: <span id="estoque10">10</span></p>
+            <div class="acoes-card">
+                <button class="btn-vender" onclick="venderItem(10)">Vender</button>
+                <button class="btn-repor" onclick="reporItem(10)">Repor</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/agenda.jpg" alt="Agenda" class="img-produto">
+            <h3>Agenda</h3>
+            <p>Preço: R$ 30,00</p>
+            <p>Estoque: <span id="estoque11">10</span></p>
+            <div class="acoes-card">
+                <button class="btn-vender" onclick="venderItem(11)">Vender</button>
+                <button class="btn-repor" onclick="reporItem(11)">Repor</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/pinceis.jpg" alt="Kit Pincéis" class="img-produto">
+            <h3>Kit Pincéis</h3>
+            <p>Preço: R$ 22,00</p>
+            <p>Estoque: <span id="estoque12">10</span></p>
+            <div class="acoes-card">
+                <button class="btn-vender" onclick="venderItem(12)">Vender</button>
+                <button class="btn-repor" onclick="reporItem(12)">Repor</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/bloconotas.jpg" alt="Bloco de Notas" class="img-produto">
+            <h3>Bloco de Notas</h3>
+            <p>Preço: R$ 11,00</p>
+            <p>Estoque: <span id="estoque13">10</span></p>
+            <div class="acoes-card">
+                <button class="btn-vender" onclick="venderItem(13)">Vender</button>
+                <button class="btn-repor" onclick="reporItem(13)">Repor</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/grampeador.jpg" alt="Grampeador" class="img-produto">
+            <h3>Grampeador</h3>
+            <p>Preço: R$ 16,50</p>
+            <p>Estoque: <span id="estoque14">10</span></p>
+            <div class="acoes-card">
+                <button class="btn-vender" onclick="venderItem(14)">Vender</button>
+                <button class="btn-repor" onclick="reporItem(14)">Repor</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/clips.jpg" alt="Caixa de Clips" class="img-produto">
+            <h3>Caixa de Clips</h3>
+            <p>Preço: R$ 5,00</p>
+            <p>Estoque: <span id="estoque15">10</span></p>
+            <div class="acoes-card">
+                <button class="btn-vender" onclick="venderItem(15)">Vender</button>
+                <button class="btn-repor" onclick="reporItem(15)">Repor</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="assets/régua.jpg" alt="Régua" class="img-produto">
+            <h3>Régua</h3>
+            <p>Preço: R$ 4,50</p>
+            <p>Estoque: <span id="estoque16">10</span></p>
+            <div class="acoes-card">
+                <button class="btn-vender" onclick="venderItem(16)">Vender</button>
+                <button class="btn-repor" onclick="reporItem(16)">Repor</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="reviews">
+        <h2>Deixe sua avaliação</h2>
+        <input type="text" id="nome" placeholder="Seu nome">
+        <textarea id="comentario" placeholder="Escreva o que achou da loja"></textarea>
+        <button onclick="enviarReview()">Enviar Avaliação</button>
+
+        <div id="listaReviews"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
